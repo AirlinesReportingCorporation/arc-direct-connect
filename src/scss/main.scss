@@ -120,6 +120,7 @@
 .arc-dc-video {
   cursor: pointer;
   position: relative;
+  margin-bottom: 60px;
 
   &:after {
     background: url(https://www2.arccorp.com/globalassets/homepage/redesign/webinar/play-button.png)
@@ -417,6 +418,7 @@ img.access-item-icon {
 
 .podcast-player {
   background: #ffffff;
+  margin-bottom:60px;
 
   .left-side {
     width: 100%;

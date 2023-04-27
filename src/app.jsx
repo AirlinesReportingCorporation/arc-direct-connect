@@ -475,7 +475,7 @@ function App() {
       <div
         id="features"
         class="bg-img-container lazy"
-        data-bg="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-trusted-bg.png"
+        data-bg="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-trusted-bg.png?1"
       >
         <div class="callout-container callout-container-mt2">
           <div class="container">
