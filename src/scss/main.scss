@@ -104,6 +104,14 @@
       padding-bottom: 120px;
     }
   }
+
+  #features {
+
+    .bg-img-container {
+      background-size: contain;
+      background-position: right center;
+    }
+  }
 }
 
 .arc-dc-video {
