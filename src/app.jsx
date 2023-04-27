@@ -43,6 +43,12 @@ var switcherContent = {
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-3.png",
       },
+
+      {
+        title: "Minimize Risk",
+        copy: "NDC transactions sent to ARC are included in ARC’s agency and carrier agreements and our revenue integrity monitoring ",
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-5.png",
+      },
       {
         title: "Verify Participation Status",
         copy: (
@@ -55,11 +61,6 @@ var switcherContent = {
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-1.png",
-      },
-      {
-        title: "Minimize Risk",
-        copy: "NDC transactions sent to ARC are included in ARC’s agency and carrier agreements and our revenue integrity monitoring ",
-        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-5.png",
       },
     ],
   },
