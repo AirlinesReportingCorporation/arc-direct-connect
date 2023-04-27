@@ -242,7 +242,7 @@ function App() {
     <div className="arc-dc-page" style={{ paddingBottom: "0" }}>
       
       <Stickynav
-        title={<><img src="https://www2.arccorp.com/globalassets/arc-logos/corporate-logos/arc-logo-s-white.png" alt="ARC Logo"/> Direct Connect</>}
+        title={<><img src="https://www2.arccorp.com/globalassets/arc-logos/corporate-logos/arc-logo-s-white.png" alt="ARC Logo"/> <div>Direct Connect</div></>}
         links={[
           { title: "Overview", url: "#overview" },
           { title: "Multimedia", url: "#media" },
