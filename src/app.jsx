@@ -26,9 +26,8 @@ var switcherContent = {
         title: "Flexible Distribution",
         copy: (
           <>
-            Distribute content to agencies using any{" "}
-            aggregator or direct API, whether NDC or another
-            proprietary schema{" "}
+            Distribute content to agencies using any aggregator or direct API,
+            whether NDC or another proprietary schema{" "}
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-7.png",
@@ -37,8 +36,8 @@ var switcherContent = {
         title: "Configurable",
         copy: (
           <>
-            Set business rules related to the processing and
-            settlement of NDC transactions{" "}
+            Set business rules related to the processing and settlement of NDC
+            transactions{" "}
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-3.png",
@@ -63,8 +62,8 @@ var switcherContent = {
         title: "Expedited Commissions",
         copy: (
           <>
-            Upfront commission settlement on NDC transactions
-            sent to ARC for reporting and settlement purposes{" "}
+            Upfront commission settlement on NDC transactions sent to ARC for
+            reporting and settlement purposes{" "}
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
@@ -77,8 +76,8 @@ var switcherContent = {
         title: "Seamless Agency Workflow",
         copy: (
           <>
-            Flexible, secure solution to report and/or settle
-            NDC transactions with airlines
+            Flexible, secure solution to report and/or settle NDC transactions
+            with airlines
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-9.png",
@@ -87,8 +86,8 @@ var switcherContent = {
         title: "Expedited Commissions",
         copy: (
           <>
-            Upfront commission settlement on NDC transactions
-            sent to ARC for reporting and settlement purposes{" "}
+            Upfront commission settlement on NDC transactions sent to ARC for
+            reporting and settlement purposes{" "}
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
@@ -97,10 +96,8 @@ var switcherContent = {
         title: "View the Difference",
         copy: (
           <>
-            
-              Ability to differentiate between NDC and GDS transactions
-            {" "}
-            within IAR and other agency reports
+            Ability to differentiate between NDC and GDS transactions within IAR
+            and other agency reports
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-8.png",
@@ -109,8 +106,8 @@ var switcherContent = {
         title: "Extended Insights",
         copy: (
           <>
-            60 months of viewership in DRS and IAR for all NDC
-            transactions sent to ARC for reporting and settlement{" "}
+            60 months of viewership in DRS and IAR for all NDC transactions sent
+            to ARC for reporting and settlement{" "}
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-11.png",
@@ -119,8 +116,7 @@ var switcherContent = {
         title: "Dedicated Support",
         copy: (
           <>
-            Access to the ARC Customer Care Center for NDC
-            transaction inquiries{" "}
+            Access to the ARC Customer Care Center for NDC transaction inquiries{" "}
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-6.png",
@@ -138,8 +134,8 @@ var switcherContent = {
         title: "Identify with Accuracy",
         copy: (
           <>
-            Corporate Identifiers can be provided on direct
-            connect transactions for use in market share calculations{" "}
+            Corporate Identifiers can be provided on direct connect transactions
+            for use in market share calculations{" "}
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-10.png",
@@ -148,8 +144,7 @@ var switcherContent = {
         title: "Mitigate Risk",
         copy: (
           <>
-            Support duty of care by including NDC transactions
-            in TMC reporting
+            Support duty of care by including NDC transactions in TMC reporting
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-5.png",
@@ -158,8 +153,8 @@ var switcherContent = {
         title: "Back-Office Efficiency",
         copy: (
           <>
-            Upfront commission settlement on NDC transactions
-            sent to ARC for reporting and/or settlement purposes{" "}
+            Upfront commission settlement on NDC transactions sent to ARC for
+            reporting and/or settlement purposes{" "}
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
@@ -240,9 +235,16 @@ function App() {
 
   return (
     <div className="arc-dc-page" style={{ paddingBottom: "0" }}>
-      
       <Stickynav
-        title={<><img src="https://www2.arccorp.com/globalassets/arc-logos/corporate-logos/arc-logo-s-white.png" alt="ARC Logo"/> <div style={{width: "145px"}}>Direct Connect</div></>}
+        title={
+          <>
+            <img
+              src="https://www2.arccorp.com/globalassets/arc-logos/corporate-logos/arc-logo-s-white.png"
+              alt="ARC Logo"
+            />{" "}
+            <div style={{ width: "145px" }}>Direct Connect</div>
+          </>
+        }
         links={[
           { title: "Overview", url: "#overview" },
           { title: "Multimedia", url: "#media" },
@@ -304,11 +306,18 @@ function App() {
                       className="arc-dc-switcher-window"
                     >
                       {switcher == "airlines" ? (
-                        <img
-                          className=""
-                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-airline.png"
-                          alt=""
-                        />
+                        <div style={{ overflow: "hidden" }}>
+                          <img
+                            className="dc-window-open animated slideOutUp"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-window.png"
+                            alt=""
+                          />
+                          <img
+                            className=""
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-airline.png"
+                            alt=""
+                          />
+                        </div>
                       ) : (
                         <img
                           src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-closed.png"
@@ -332,10 +341,17 @@ function App() {
                       className="arc-dc-switcher-window"
                     >
                       {switcher == "agency" ? (
-                        <img
-                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-agency.png"
-                          alt=""
-                        />
+                        <div>
+                          <img
+                            className="dc-window-open animated slideOutUp"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-window.png"
+                            alt=""
+                          />
+                          <img
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-agency.png"
+                            alt=""
+                          />
+                        </div>
                       ) : (
                         <img
                           src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-closed.png"
@@ -359,11 +375,18 @@ function App() {
                       className="arc-dc-switcher-window"
                     >
                       {switcher == "corporate" ? (
-                        <img
-                          className="animate fadeIn"
-                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-corporate.png"
-                          alt=""
-                        />
+                        <div>
+                          <img
+                            className="dc-window-open animated slideOutUp"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-window.png"
+                            alt=""
+                          />
+                          <img
+                            className="animate fadeIn"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-corporate.png"
+                            alt=""
+                          />
+                        </div>
                       ) : (
                         <img
                           src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-closed.png"

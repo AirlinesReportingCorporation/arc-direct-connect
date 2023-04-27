@@ -233,6 +233,11 @@
     margin-right: auto;
   }
 
+  .dc-window-open {
+    position: absolute;
+    bottom: 30px;
+  }
+
   .arc-dc-switcher-window-title {
     font-family: SourceSansPro-SemiBold, Arial, Helvetica, sans-serif;
     font-size: 24px;
@@ -247,6 +252,10 @@
 
   .arc-dc-switcher-window {
     cursor: pointer;
+    overflow: hidden;
+    border-top-right-radius: 110px;
+    border-top-left-radius: 110px;
+    position: relative;
   }
 
   .arc-dc-switcher-content {
