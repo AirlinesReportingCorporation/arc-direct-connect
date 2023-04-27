@@ -27,7 +27,7 @@ var switcherContent = {
         copy: (
           <>
             Distribute content to agencies using any{" "}
-            <strong>aggregator or direct API</strong>, whether NDC or another
+            aggregator or direct API, whether NDC or another
             proprietary schema{" "}
           </>
         ),
@@ -37,7 +37,7 @@ var switcherContent = {
         title: "Configurable",
         copy: (
           <>
-            <strong>Set business rules </strong>related to the processing and
+            Set business rules related to the processing and
             settlement of NDC transactions{" "}
           </>
         ),
@@ -63,7 +63,7 @@ var switcherContent = {
         title: "Expedited Commissions",
         copy: (
           <>
-            <strong>Upfront commission settlement</strong> on NDC transactions
+            Upfront commission settlement on NDC transactions
             sent to ARC for reporting and settlement purposes{" "}
           </>
         ),
@@ -77,7 +77,7 @@ var switcherContent = {
         title: "Seamless Agency Workflow",
         copy: (
           <>
-            <strong>Flexible, secure solution</strong> to report and/or settle
+            Flexible, secure solution to report and/or settle
             NDC transactions with airlines
           </>
         ),
@@ -87,7 +87,7 @@ var switcherContent = {
         title: "Expedited Commissions",
         copy: (
           <>
-            <strong>Upfront commission settlement</strong> on NDC transactions
+            Upfront commission settlement on NDC transactions
             sent to ARC for reporting and settlement purposes{" "}
           </>
         ),
@@ -97,9 +97,9 @@ var switcherContent = {
         title: "View the Difference",
         copy: (
           <>
-            <strong>
+            
               Ability to differentiate between NDC and GDS transactions
-            </strong>{" "}
+            {" "}
             within IAR and other agency reports
           </>
         ),
@@ -109,7 +109,7 @@ var switcherContent = {
         title: "Extended Insights",
         copy: (
           <>
-            <strong>60 months of viewership in DRS and IAR</strong> for all NDC
+            60 months of viewership in DRS and IAR for all NDC
             transactions sent to ARC for reporting and settlement{" "}
           </>
         ),
@@ -119,7 +119,7 @@ var switcherContent = {
         title: "Dedicated Support",
         copy: (
           <>
-            Access to the <strong>ARC Customer Care Center</strong> for NDC
+            Access to the ARC Customer Care Center for NDC
             transaction inquiries{" "}
           </>
         ),
@@ -138,7 +138,7 @@ var switcherContent = {
         title: "Identify with Accuracy",
         copy: (
           <>
-            <strong>Corporate Identifiers</strong> can be provided on direct
+            Corporate Identifiers can be provided on direct
             connect transactions for use in market share calculations{" "}
           </>
         ),
@@ -148,7 +148,7 @@ var switcherContent = {
         title: "Mitigate Risk",
         copy: (
           <>
-            Support <strong>duty of care</strong> by including NDC transactions
+            Support duty of care by including NDC transactions
             in TMC reporting
           </>
         ),
@@ -158,7 +158,7 @@ var switcherContent = {
         title: "Back-Office Efficiency",
         copy: (
           <>
-            <strong>Upfront commission settlement</strong> on NDC transactions
+            Upfront commission settlement on NDC transactions
             sent to ARC for reporting and/or settlement purposes{" "}
           </>
         ),
