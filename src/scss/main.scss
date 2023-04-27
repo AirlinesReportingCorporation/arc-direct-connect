@@ -236,6 +236,12 @@
   .dc-window-open {
     position: absolute;
     bottom: 30px;
+
+    &.top {
+      top: 0;
+      bottom: auto;
+      z-index:9999999999999999;
+    }
   }
 
   .arc-dc-switcher-window-title {

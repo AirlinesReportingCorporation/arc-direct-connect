@@ -308,6 +308,11 @@ function App() {
                       {switcher == "airlines" ? (
                         <div style={{ overflow: "hidden" }}>
                           <img
+                            className="dc-window-open top"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png"
+                            alt=""
+                          />
+                          <img
                             className="dc-window-open animated slideOutUp"
                             src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-window.png"
                             alt=""
@@ -343,6 +348,11 @@ function App() {
                       {switcher == "agency" ? (
                         <div>
                           <img
+                            className="dc-window-open top"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png"
+                            alt=""
+                          />
+                          <img
                             className="dc-window-open animated slideOutUp"
                             src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-window.png"
                             alt=""
@@ -377,8 +387,18 @@ function App() {
                       {switcher == "corporate" ? (
                         <div>
                           <img
+                            className="dc-window-open top"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png"
+                            alt=""
+                          />
+                          <img
                             className="dc-window-open animated slideOutUp"
                             src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-window.png"
+                            alt=""
+                          />
+                          <img
+                            className="dc-window-open top"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png"
                             alt=""
                           />
                           <img
