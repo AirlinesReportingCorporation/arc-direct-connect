@@ -165,9 +165,18 @@
 
 .arc-dc-jumbo {
   background-color: black;
-  padding-top: 225px;
+  padding-top: 250px;
   background-size: auto !important;
   background-position: top right;
+  .ctaBtn {
+    display: none;
+  }
+
+  .product-header {
+    font-size: 86px;
+    line-height: 84px;
+    margin-bottom: 30px;
+  }
 
   .product-callout-copy {
     max-width: 1000px !important;

@@ -247,7 +247,6 @@ function App() {
             way that suits them best.
           </>
         }
-        ctaLink="#overview"
         width="100%"
       />
 
