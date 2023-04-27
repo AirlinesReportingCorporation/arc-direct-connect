@@ -29,6 +29,60 @@
   }
 }
 
+.usa-embed-container {
+  position: relative;
+
+  padding-bottom: 56.25%; /* set the aspect ratio here as (height / width) * 100% */
+
+  height: 0;
+
+  overflow: hidden;
+
+  max-width: 100%;
+
+  margin-bottom: 60px;
+}
+
+.usa-embed-container iframe {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  border: none !important;
+}
+
+.ReactModalPortal {
+  z-index: 999999;
+  position: relative;
+
+  .modal-close {
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .ReactModal__Content {
+    max-width: 800px;
+    width: 100%;
+    top: 50% !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    marginright: -50%;
+    transform: translate(-50%, -50%) !important;
+    border: none;
+  }
+}
+
+.ReactModal__Overlay {
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
 .arc-dc-page {
   width: 100%;
 
@@ -37,6 +91,35 @@
   }
   .product-quote.fluid .product-quote-copy {
     max-width: 780px !important;
+  }
+
+  #overview {
+    .callout-container {
+      padding-bottom: 0;
+    }
+  }
+
+  #media {
+    .callout-container {
+      padding-bottom: 120px;
+    }
+  }
+}
+
+.arc-dc-video {
+  cursor: pointer;
+  position: relative;
+
+  &:after {
+    background: url(https://www2.arccorp.com/globalassets/homepage/redesign/webinar/play-button.png)
+      50% no-repeat;
+    background-size: contain;
+    bottom: 15px;
+    content: "";
+    height: 27px;
+    left: 10px;
+    position: absolute;
+    width: 59px;
   }
 }
 
@@ -82,7 +165,7 @@
 
 .arc-dc-jumbo {
   background-color: black;
-  padding-top: 325px;
+  padding-top: 225px;
   background-size: auto !important;
   background-position: top right;
 
@@ -172,6 +255,20 @@
         font-family: SourceSansPro-Bold, Arial, Helvetica, sans-serif;
       }
     }
+  }
+}
+
+.arc-dc-support {
+  text-align: center;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  border-top: 1px solid #2a2b2c;
+  border-bottom: 1px solid #2a2b2c;
+  h2 {
+    font-family: SourceSansPro-SemiBold, Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    line-height: 52px;
+    margin-bottom: 30px;
   }
 }
 

@@ -38,6 +38,7 @@
     "react-app-polyfill": "^1.0.6",
     "react-dom": "^16.13.1",
     "react-loading": "^2.0.3",
+    "react-modal": "^3.16.1",
     "swiper": "^9.2.4"
   }
 }

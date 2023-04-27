@@ -6,6 +6,8 @@ import {
   ProductCallout,
 } from "arccorp-vars";
 
+import Modal from "react-modal";
+
 import { PodcastWidget } from "podcast-widget";
 
 import { register } from "swiper/element/bundle";
@@ -161,6 +163,15 @@ var switcherContent = {
 function App() {
   const swiperElRef = useRef(null);
   const [switcher, setSwitcher] = useState("airlines");
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   function handleSwitch(type) {
     setSwitcher(type);
@@ -171,9 +182,20 @@ function App() {
     const params = {
       navigation: true,
       loop: true,
-      slidesPerView: 5,
+      slidesPerView: 1,
       speed: 500,
       cssMode: true,
+      breakpoints: {
+        766: {
+          slidesPerView: 2,
+        },
+        959: {
+          slidesPerView: 3,
+        },
+        1260: {
+          slidesPerView: 5,
+        },
+      },
       //add this
       injectStyles: [
         `
@@ -200,9 +222,11 @@ function App() {
           { title: "Overview", url: "#overview" },
           { title: "Media", url: "#media" },
           { title: "Partners", url: "#partners" },
+          { title: "Resources", url: "#resources" },
+          { title: "News", url: "#news" },
         ]}
-        contactUs="Contact Us"
-        rightLink="https://www2.arccorp.com/support-training/product-sales-request?Product=AirportIS"
+        contactUs="Apply Now"
+        rightLink="https://www2.arccorp.com/globalassets/ndc/direct-connect-program-application_v8.pdf"
       />
 
       <ProductJumbo
@@ -228,6 +252,18 @@ function App() {
       />
 
       <ProductText
+        className="bg-color-fog"
+        eyebrow="Overview"
+        id="overview"
+        subTitleClass=""
+        subtitle="We pair ARC Direct Connect with NDC, alongside our custom-configured settlement platform, to create unmatched clarity and efficiency for any distribution strategy. Together, we enhance partnerships to deliver richer, personalized traveler experiences. "
+        title={
+          <>
+            Leverage NDC in Your <br />
+            Distribution Strategy
+          </>
+        }
+        titleClass="arc-dc-header"
         body={
           <>
             <div className="arc-dc-switcher">
@@ -352,20 +388,17 @@ function App() {
                 </div>
               </div>
             </div>
+            <div className="arc-dc-support">
+              <h2>Let us support your NDC journey.</h2>
+              <a
+                href="https://www2.arccorp.com/globalassets/ndc/direct-connect-program-application_v8.pdf"
+                className="ctaBtn"
+              >
+                Get Started
+              </a>
+            </div>
           </>
         }
-        className="bg-color-fog"
-        eyebrow="Overview"
-        id="overview"
-        subTitleClass=""
-        subtitle="We pair ARC Direct Connect with NDC, alongside our custom-configured settlement platform, to create unmatched clarity and efficiency for any distribution strategy. Together, we enhance partnerships to deliver richer, personalized traveler experiences. "
-        title={
-          <>
-            Leverage NDC in Your <br />
-            Distribution Strategy
-          </>
-        }
-        titleClass="arc-dc-header"
       />
 
       <ProductText
@@ -376,7 +409,9 @@ function App() {
                 <PodcastWidget />
               </div>
               <div className="col-lg-6">
-                <img src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-video.png" />
+                <div className="arc-dc-video" onClick={openModal}>
+                  <img src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-video.png" />
+                </div>
               </div>
             </div>
           </>
@@ -389,6 +424,28 @@ function App() {
         title="Gain Deeper Insights"
         titleClass="arc-dc-header"
       />
+
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Example Modal"
+      >
+        <div onClick={closeModal} className="modal-close text-right">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <div className="usa-embed-container mt-5">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/p-AwIJmxnuc?&autoplay=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            autoplay="true"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </Modal>
 
       <div
         id="features"
@@ -573,8 +630,58 @@ function App() {
                   <div className="arc-dc-image">
                     <img
                       className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/homepage/redesign/ndc/aa_logo.png"
-                      alt="American Airlines"
+                      src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/eva_logo.png"
+                      alt="Eva"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/iberia_logo.png"
+                      alt="Iberia"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/klm_logo.png"
+                      alt="KLM"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/qatar_logo.png"
+                      alt="Qatar"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/sa_logo.png"
+                      alt="Qatar"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/ua_logo.png"
+                      alt="Qatar"
                       loading="lazy"
                     />
                   </div>

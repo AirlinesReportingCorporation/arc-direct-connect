@@ -17,42 +17,64 @@ class App2 extends Component {
     return (
       <div className="arc-dc-page">
         <ProductQuote
-          author="Simon Brooks"
-          title="Senior Vice President, Sales for North America"
+          author="Tye Radcliffe"
+          title="SVP of Product Strategy, Order Group"
           backgroundImage="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-quote.png"
           className=""
-          company="British Airways"
-          id=""
-          quote="British Airways is excited to be the first test partner for ARC's enhanced settlement functionality, which enables us to evolve our distribution strategy with the travel agency channel. ARC has always been a trusted partner to British Airways, and we have valued their flexibility, responsiveness and collaboration during this testing process. These enhancements will aid us in developing our relationships with agencies, and they set the stage for our growing distribution stratetgy in the U.S."
+          company="Accelya"
+          id="quote"
+          quote="ARC has partnered closely with United on several of our omnichannel retailing initiatives, including NDC. This implementation provides us with a strong foundation for managing NDC transactions with travel agencies and travel management companies. By leveraging NDC, United is equipped to distribute richer content to travelers through our travel agency partners, with more flexible payment and settlement options."
         />
-        <ProductLinks
-          prodLink={[
-            {
-              alt: "Direct Connect Production Sheet",
-              copy: "Download an overview sheet of Direct Connect.",
-              cta: "Download",
-              header: <>Direct Connect <br/>Product Sheet</>,
-              icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/ndc-icon-1.png",
-              link: "https://www2.arccorp.com/globalassets/datasheets/DirectConnectwithNDC.pdf",
-            },
-            {
-              alt: "Access ARC's NDC Recordings",
-              copy: "View videos that further explain the benefits of NDC.",
-              header: <>Access ARC’s <br/>NDC Recordings</>,
-              cta: "Watch ",
-              icon: "https://www2.arccorp.com/globalassets/homepage/redesign/ndc/ndc-icon-2.png",
-              link: "https://www.youtube.com/playlist?list=PLf5REmQDokOmWX9wwbsFMTUDAwP5ih8LU"
-            },
-            {
-              alt: "Direct Connect Airline Capabilities Grid",
-              copy: "ARC provides advice, education and tools to help recognize and reduce fraud and mitigate risk.",
-              cta: "Learn More",
-              header: "Direct Connect Airline Capabilities Grid",
-              icon: "https://www2.arccorp.com/globalassets/homepage/redesign/ndc/ndc-icon-3.png",
-              link: "https://www2.arccorp.com/direct-connect-ndc/#ndc-app",
-            },
-          ]}
-        />
+        <div id="resources">
+          <ProductLinks
+            prodLink={[
+              {
+                alt: "Direct Connect Production Sheet",
+                copy: (
+                  <>
+                    Download an overview sheet
+                    <br /> of Direct Connect.
+                  </>
+                ),
+                cta: "Download",
+                header: (
+                  <>
+                    Direct Connect <br />
+                    Product Sheet
+                  </>
+                ),
+                icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/ndc-icon-1.png",
+                link: "https://www2.arccorp.com/globalassets/datasheets/DirectConnectwithNDC.pdf",
+              },
+              {
+                alt: "Access ARC's NDC Recordings",
+                copy: (
+                  <>
+                    View videos that further <br />
+                    explain the benefits of NDC.
+                  </>
+                ),
+                header: (
+                  <>
+                    Access ARC’s <br />
+                    NDC Recordings
+                  </>
+                ),
+                cta: "Watch ",
+                icon: "https://www2.arccorp.com/globalassets/homepage/redesign/ndc/ndc-icon-2.png",
+                link: "https://www.youtube.com/playlist?list=PLf5REmQDokOmWX9wwbsFMTUDAwP5ih8LU",
+              },
+              {
+                alt: "Direct Connect Airline Capabilities Grid",
+                copy: "ARC provides advice, education and tools to help recognize and reduce fraud and mitigate risk.",
+                cta: "Learn More",
+                header: "Direct Connect Airline Capabilities Grid",
+                icon: "https://www2.arccorp.com/globalassets/homepage/redesign/ndc/ndc-icon-3.png",
+                link: "https://www2.arccorp.com/direct-connect-ndc/#ndc-app",
+              },
+            ]}
+          />
+        </div>
       </div>
     );
   }
