@@ -240,7 +240,7 @@
     &.top {
       top: 0;
       bottom: auto;
-      z-index:9999999999999999;
+      z-index:2;
     }
   }
 
@@ -259,8 +259,6 @@
   .arc-dc-switcher-window {
     cursor: pointer;
     overflow: hidden;
-    border-top-right-radius: 110px;
-    border-top-left-radius: 110px;
     position: relative;
   }
 
