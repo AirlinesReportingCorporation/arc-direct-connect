@@ -361,14 +361,14 @@ function App() {
                           alt=""
                         />
                       )}
-                    </div>
-                    <div
-                      className={
-                        "arc-dc-switcher-window-title " +
-                        (switcher === "corporate" ? "active" : "")
-                      }
-                    >
-                      Corporate Buyers
+                      <div
+                        className={
+                          "arc-dc-switcher-window-title " +
+                          (switcher === "corporate" ? "active" : "")
+                        }
+                      >
+                        Corporate Buyers
+                      </div>
                     </div>
                   </div>
                 </div>
