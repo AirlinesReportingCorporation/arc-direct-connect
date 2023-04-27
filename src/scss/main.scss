@@ -105,12 +105,12 @@
     }
   }
 
-  #features {
-    .bg-img-container {
-      background-color: #000000;
-      background-size: contain;
+  #features.bg-img-container {
       background-position: right center;
-    }
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: #000;
+    
   }
 
   .product-quote-bg {
