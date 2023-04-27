@@ -255,7 +255,7 @@ function App() {
         eyebrow="Overview"
         id="overview"
         subTitleClass=""
-        subtitle="We pair ARC Direct Connect with NDC, alongside our custom-configured settlement platform, to create unmatched clarity and efficiency for any distribution strategy. Together, we enhance partnerships to deliver richer, personalized traveler experiences. "
+        subtitle="We pair ARC Direct Connect with NDC, alongside our custom-configured settlement platform, to create unmatched clarity and efficiency for any distribution strategy. Together, we enhance partnerships to deliver richer, personalized traveler experiences."
         title={
           <>
             Leverage NDC in Your <br />
@@ -419,7 +419,7 @@ function App() {
         eyebrow="Media"
         id="media"
         subTitleClass=""
-        subtitle="Explore ARC Direct Connect, omnichannel and NDC-related topics with top industry experts.  "
+        subtitle="Explore ARC Direct Connect, omnichannel and NDC-related topics with top industry experts."
         title="Gain Deeper Insights"
         titleClass="arc-dc-header"
       />
@@ -537,7 +537,7 @@ function App() {
                     <div class="d-flex align-items-center">
                       <img
                         src="https://www2.arccorp.com/globalassets/homepage/redesign/ndc/ndc-settlement-4.png"
-                        alt="Ability to identify direct connect transactions in IAR and on airline outputs"
+                        alt="Ability to identify direct connect transactions in IAR and on airline outputs"
                       />
                       <div class="subcallout-card-copy">
                         Ability to identify direct connect transactions in IAR
