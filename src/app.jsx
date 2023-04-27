@@ -207,6 +207,22 @@ function App() {
           .swiper-wrapper {
             overflow: hidden;
           }
+          .swiper-button-prev:after {
+            content: '';
+            background: url(https://www2.arccorp.com/globalassets/ndc/left.png);
+            height: 13px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 19px;
+          }
+          .swiper-button-next:after {
+            content: '';
+            background: url(https://www2.arccorp.com/globalassets/ndc/right.png);
+            height: 13px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 19px;
+          }
       `,
       ],
     };
@@ -227,7 +243,7 @@ function App() {
           { title: "News", url: "#news" },
         ]}
         contactUs="Apply Now"
-        rightLink="https://www2.arccorp.com/globalassets/ndc/direct-connect-program-application_v8.pdf"
+        rightLink="https://www2.arccorp.com/globalassets/ndc/direct-connect-program-application_v10.pdf"
       />
 
       <ProductJumbo
@@ -391,7 +407,7 @@ function App() {
             <div className="arc-dc-support">
               <h2>Let us support your NDC journey.</h2>
               <a
-                href="https://www2.arccorp.com/globalassets/ndc/direct-connect-program-application_v8.pdf"
+                href="https://www2.arccorp.com/globalassets/ndc/direct-connect-program-application_v10.pdf"
                 className="ctaBtn"
               >
                 Get Started
@@ -468,8 +484,8 @@ function App() {
                     fontFamily: "SourceSansPro-Light",
                   }}
                 >
-                  ARC’s settlement platform features that support additional
-                  Direct Connect implementations:
+                  ARC’s settlement features that support Direct Connect
+                  implementations:
                 </div>
               </div>
             </div>
