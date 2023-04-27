@@ -756,7 +756,7 @@ function App() {
                   <div className="arc-dc-image">
                     <img
                       className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/olympic.jpg"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/olympic.png"
                       alt="olympic"
                       loading="lazy"
                     />
