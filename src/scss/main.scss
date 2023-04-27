@@ -106,11 +106,10 @@
   }
 
   #features.bg-img-container {
-      background-position: right center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-color: #000;
-    
+    background-position: right center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #000;
   }
 
   .product-quote-bg {
@@ -137,8 +136,13 @@
 
 .arc-dc-airlines {
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 60px;
   text-align: center;
+
+  .container {
+    border-bottom: 1px solid;
+    padding-bottom: 60px;
+  }
 
   h2 {
     font-family: SourceSansPro-Black, Arial, Helvetica, sans-serif;
