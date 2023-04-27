@@ -238,6 +238,7 @@ function App() {
           { title: "Resources", url: "#resources" },
           { title: "News", url: "#news" },
         ]}
+        target="_blank"
         contactUs="Apply Now"
         rightLink="https://www2.arccorp.com/globalassets/ndc/direct-connect-program-application_v10.pdf"
       />
@@ -405,6 +406,7 @@ function App() {
               <a
                 href="https://www2.arccorp.com/globalassets/ndc/direct-connect-program-application_v10.pdf"
                 className="ctaBtn"
+                target="_blank"
               >
                 Get Started
               </a>

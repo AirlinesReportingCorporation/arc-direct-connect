@@ -27,6 +27,7 @@ class App2 extends Component {
         />
         <div id="resources">
           <ProductLinks
+            colClass="col-lg-4"
             prodLink={[
               {
                 alt: "Direct Connect Production Sheet",
@@ -39,6 +40,7 @@ class App2 extends Component {
                 ),
                 icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/ndc-icon-1.png",
                 link: "https://www2.arccorp.com/globalassets/datasheets/DirectConnectwithNDC.pdf",
+                direction: "down"
               },
               {
                 alt: "Access ARC's NDC Media Library",
