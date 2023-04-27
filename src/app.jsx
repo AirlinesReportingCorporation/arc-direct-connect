@@ -309,7 +309,7 @@ function App() {
                         <div style={{ overflow: "hidden" }}>
                           <img
                             className="dc-window-open top"
-                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png?1"
                             alt=""
                           />
                           <img
@@ -349,7 +349,7 @@ function App() {
                         <div>
                           <img
                             className="dc-window-open top"
-                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png?1"
                             alt=""
                           />
                           <img
@@ -388,7 +388,7 @@ function App() {
                         <div>
                           <img
                             className="dc-window-open top"
-                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png?1"
                             alt=""
                           />
                           <img
@@ -398,7 +398,7 @@ function App() {
                           />
                           <img
                             className="dc-window-open top"
-                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png?1"
                             alt=""
                           />
                           <img
