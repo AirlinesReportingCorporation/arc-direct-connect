@@ -68,7 +68,7 @@ var switcherContent = {
         copy: (
           <>
             <strong>Flexible, secure solution</strong> to report and/or settle
-            NDC transactions with airlines.
+            NDC transactions with airlines
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-9.png",
@@ -234,7 +234,7 @@ function App() {
         title="Direct Connect"
         links={[
           { title: "Overview", url: "#overview" },
-          { title: "Media", url: "#media" },
+          { title: "Multimedia", url: "#media" },
           { title: "Partners", url: "#partners" },
           { title: "Resources", url: "#resources" },
           { title: "News", url: "#news" },
@@ -432,7 +432,7 @@ function App() {
           </>
         }
         className="bg-color-fog"
-        eyebrow="Media"
+        eyebrow="Multimedia"
         id="media"
         subTitleClass="asdf"
         subtitle="Explore ARC Direct Connect, omnichannel and NDC-related topics with top industry experts."
