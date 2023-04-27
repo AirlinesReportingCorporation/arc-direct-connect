@@ -1,4 +1,4 @@
-import React, { Component, useRef, useEffect } from "react";
+import React, { Component, useRef, useEffect, useState } from "react";
 import {
   Stickynav,
   ProductJumbo,
@@ -12,8 +12,159 @@ import { register } from "swiper/element/bundle";
 // register Swiper custom elements
 register();
 
+var switcherContent = {
+  airlines: {
+    data: [
+      {
+        title: "Enhanced Partnerships",
+        copy: "Provides a flexible, secure means to report and/or settle transactions and creates a seamless agency workflow ",
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-9.png",
+      },
+      {
+        title: "Flexible Distribution",
+        copy: (
+          <>
+            Distribute content to agencies using any{" "}
+            <strong>aggregator or direct API</strong>, whether NDC or another
+            proprietary schema{" "}
+          </>
+        ),
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-7.png",
+      },
+      {
+        title: "Configurable",
+        copy: (
+          <>
+            <strong>Set business rules </strong>related to the processing and
+            settlement of NDC transactions{" "}
+          </>
+        ),
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-3.png",
+      },
+      {
+        title: "Verify Participation Status",
+        copy: (
+          <>
+            Access ARC’s Ticketing Authority API,{" "}
+            <strong>available free of charge to airlines</strong> that report
+            and settle all <strong>NDC transactions via ARC</strong>, giving you
+            the assurance of knowing you’re working with an ARC-accredited
+            agency{" "}
+          </>
+        ),
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-1.png",
+      },
+      {
+        title: "Minimize Risk",
+        copy: "NDC transactions sent to ARC are included in ARC’s agency and carrier agreements and our revenue integrity monitoring ",
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-5.png",
+      },
+    ],
+  },
+  agency: {
+    data: [
+      {
+        title: "Seamless Agency Workflow",
+        copy: (
+          <>
+            <strong>Flexible, secure solution</strong> to report and/or settle
+            NDC transactions with airlines.
+          </>
+        ),
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-9.png",
+      },
+      {
+        title: "Back-Office Efficiency",
+        copy: (
+          <>
+            <strong>Upfront commission settlement</strong> on NDC transactions
+            sent to ARC for reporting and settlement purposes{" "}
+          </>
+        ),
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
+      },
+      {
+        title: "View the Difference",
+        copy: (
+          <>
+            <strong>
+              Ability to differentiate between NDC and GDS transactions
+            </strong>{" "}
+            within IAR and on other agency reports
+          </>
+        ),
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
+      },
+      {
+        title: "Extended Insights",
+        copy: (
+          <>
+            <strong>60 months of viewership in DRS and IAR</strong> for all NDC
+            transactions sent to ARC for reporting and settlement{" "}
+          </>
+        ),
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-11.png",
+      },
+      {
+        title: "Dedicated Support",
+        copy: (
+          <>
+            Access to the <strong>ARC Customer Care Center</strong> for NDC
+            transaction inquiries{" "}
+          </>
+        ),
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-6.png",
+      },
+    ],
+  },
+  corporate: {
+    data: [
+      {
+        title: "Shared Knowledge",
+        copy: "Consolidated reporting through your TMC or Corporate Travel Department  ",
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-4.png",
+      },
+      {
+        title: "Identify with Accuracy",
+        copy: (
+          <>
+            <strong>Corporate Identifiers</strong> can be provided on direct
+            connect transactions for use in market share calculations{" "}
+          </>
+        ),
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-10.png",
+      },
+      {
+        title: "Mitigate Risk",
+        copy: (
+          <>
+            Support <strong>duty of care</strong> by including NDC transactions
+            in TMC reporting
+          </>
+        ),
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-5.png",
+      },
+      {
+        title: "Back-Office Efficiency",
+        copy: (
+          <>
+            <strong>Upfront commission settlement</strong> on NDC transactions
+            sent to ARC for reporting and/or settlement purposes{" "}
+          </>
+        ),
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
+      },
+    ],
+  },
+};
+
 function App() {
   const swiperElRef = useRef(null);
+  const [switcher, setSwitcher] = useState("airlines");
+
+  function handleSwitch(type) {
+    setSwitcher(type);
+  }
 
   useEffect(() => {
     const swiperContainer = swiperElRef.current;
@@ -22,7 +173,7 @@ function App() {
       loop: true,
       slidesPerView: 5,
       speed: 500,
-      cssMode:true,
+      cssMode: true,
       //add this
       injectStyles: [
         `
@@ -39,18 +190,6 @@ function App() {
 
     Object.assign(swiperContainer, params);
     swiperContainer.initialize();
-  }, []);
-
-  useEffect(() => {
-    // listen for Swiper events using addEventListener
-    swiperElRef.current.addEventListener("progress", (e) => {
-      const [swiper, progress] = e.detail;
-      console.log(progress);
-    });
-
-    swiperElRef.current.addEventListener("slidechange", (e) => {
-      console.log("slide changed");
-    });
   }, []);
 
   return (
@@ -91,8 +230,128 @@ function App() {
       <ProductText
         body={
           <>
-            <hr className="arc-dc-overview-hr" />
-            <div>asdf</div>
+            <div className="arc-dc-switcher">
+              <div className="arc-dc-switcher-instruction">
+                Choose your business type.
+              </div>
+              <div className="arc-dc-switcher-windows">
+                <div className="row">
+                  <div className="col-4 animated bounce">
+                    <div
+                      onMouseEnter={() => handleSwitch("airlines")}
+                      onClick={() => handleSwitch("airlines")}
+                      className="arc-dc-switcher-window"
+                    >
+                      {switcher == "airlines" ? (
+                        <img
+                          className=""
+                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-airline.png"
+                          alt=""
+                        />
+                      ) : (
+                        <img
+                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-closed.png"
+                          alt=""
+                        />
+                      )}
+                      <div
+                        className={
+                          "arc-dc-switcher-window-title " +
+                          (switcher === "airlines" ? "active" : "")
+                        }
+                      >
+                        Airlines
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-4">
+                    <div
+                      onMouseEnter={() => handleSwitch("agency")}
+                      onClick={() => handleSwitch("agency")}
+                      className="arc-dc-switcher-window"
+                    >
+                      {switcher == "agency" ? (
+                        <img
+                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-agency.png"
+                          alt=""
+                        />
+                      ) : (
+                        <img
+                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-closed.png"
+                          alt=""
+                        />
+                      )}
+                      <div
+                        className={
+                          "arc-dc-switcher-window-title " +
+                          (switcher === "agency" ? "active" : "")
+                        }
+                      >
+                        Agencies
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-4">
+                    <div
+                      onMouseEnter={() => handleSwitch("corporate")}
+                      onClick={() => handleSwitch("corporate")}
+                      className="arc-dc-switcher-window"
+                    >
+                      {switcher == "corporate" ? (
+                        <img
+                          className="animate fadeIn"
+                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-corporate.png"
+                          alt=""
+                        />
+                      ) : (
+                        <img
+                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-closed.png"
+                          alt=""
+                        />
+                      )}
+                    </div>
+                    <div
+                      className={
+                        "arc-dc-switcher-window-title " +
+                        (switcher === "corporate" ? "active" : "")
+                      }
+                    >
+                      Corporate Buyers
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="arc-dc-switcher-content">
+                <h2>
+                  {switcher === "airlines" ? "Adapted for Airlines" : <></>}
+                  {switcher === "agency" ? (
+                    "Tailored for Travel Agencies"
+                  ) : (
+                    <></>
+                  )}
+                  {switcher === "corporate" ? (
+                    "Customized for Corporate Buyers"
+                  ) : (
+                    <></>
+                  )}
+                </h2>
+                <div className="row">
+                  {switcherContent[switcher].data.map((content) => (
+                    <div className="col-lg-6">
+                      <div className="arc-dc-switcher-content-icon">
+                        <img src={content.icon} />
+                      </div>
+                      <div className="arc-dc-switcher-content-title">
+                        {content.title}
+                      </div>
+                      <div className="arc-dc-switcher-content-copy">
+                        {content.copy}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </>
         }
         className="bg-color-fog"
@@ -113,7 +372,9 @@ function App() {
         body={
           <>
             <div className="row" style={{ marginTop: "60px" }}>
-              <div className="col-lg-6"><PodcastWidget /></div>
+              <div className="col-lg-6">
+                <PodcastWidget />
+              </div>
               <div className="col-lg-6">
                 <img src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-video.png" />
               </div>
@@ -256,10 +517,7 @@ function App() {
             <h2>COMPANIES THAT PARTNER WITH ARC’S DIRECT CONNECT PROGRAM</h2>
 
             <div className="arc-dc-airline-logos">
-              <swiper-container
-               init="false"
-                ref={swiperElRef}
-              >
+              <swiper-container init="false" ref={swiperElRef}>
                 <swiper-slide>
                   <div className="arc-dc-image">
                     <img
