@@ -59,6 +59,16 @@ var switcherContent = {
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-1.png",
       },
+      {
+        title: "Expedited Commissions",
+        copy: (
+          <>
+            <strong>Upfront commission settlement</strong> on NDC transactions
+            sent to ARC for reporting and settlement purposes{" "}
+          </>
+        ),
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
+      },
     ],
   },
   agency: {
@@ -74,7 +84,7 @@ var switcherContent = {
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-9.png",
       },
       {
-        title: "Back-Office Efficiency",
+        title: "Expedited Commissions",
         copy: (
           <>
             <strong>Upfront commission settlement</strong> on NDC transactions
