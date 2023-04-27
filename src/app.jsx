@@ -53,7 +53,8 @@ var switcherContent = {
         title: "Verify Participation Status",
         copy: (
           <>
-            Access ARC’s Ticketing Authority API, giving you the assurance of knowing you’re working with an ARC-accredited agency
+            Access ARC’s Ticketing Authority API, giving you the assurance of
+            knowing you’re working with an ARC-accredited agency
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-1.png",
@@ -190,7 +191,7 @@ function App() {
           slidesPerView: 3,
         },
         1260: {
-          slidesPerView: 5,
+          slidesPerView: 4,
         },
       },
       //add this
@@ -268,7 +269,7 @@ function App() {
         className="bg-color-fog"
         eyebrow="Overview"
         id="overview"
-        subTitleClass=""
+        subTitleClass="asdf"
         subtitle="We pair ARC Direct Connect with NDC, alongside our custom-configured settlement platform, to create unmatched clarity and efficiency for any distribution strategy. Together, we enhance partnerships to deliver richer, personalized traveler experiences."
         title={
           <>
@@ -433,7 +434,7 @@ function App() {
         className="bg-color-fog"
         eyebrow="Media"
         id="media"
-        subTitleClass=""
+        subTitleClass="asdf"
         subtitle="Explore ARC Direct Connect, omnichannel and NDC-related topics with top industry experts."
         title="Gain Deeper Insights"
         titleClass="arc-dc-header"
@@ -810,7 +811,6 @@ function App() {
                     />
                   </div>
                 </swiper-slide>
-               
               </swiper-container>
             </div>
           </div>
