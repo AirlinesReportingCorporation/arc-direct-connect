@@ -92,7 +92,7 @@ var switcherContent = {
             within IAR and other agency reports
           </>
         ),
-        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-8.png",
       },
       {
         title: "Extended Insights",
