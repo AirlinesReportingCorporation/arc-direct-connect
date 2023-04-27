@@ -593,7 +593,7 @@ function App() {
                   <div className="arc-dc-image">
                     <img
                       className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/af_logo.png"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/airfrance.jpg"
                       alt="Air France"
                       loading="lazy"
                       //style={{ paddingRight: "50px", paddingBottom: "18px;" }}
@@ -604,7 +604,7 @@ function App() {
                   <div className="arc-dc-image">
                     <img
                       className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/homepage/redesign/ndc/aa_logo.png"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/american.jpg"
                       alt="American Airlines"
                       loading="lazy"
                     />
@@ -614,7 +614,17 @@ function App() {
                   <div className="arc-dc-image">
                     <img
                       className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/avianca_logo.png"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/austrian.jpg"
+                      alt="Austrian"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/avianca.jpg"
                       alt="Avianca"
                       loading="lazy"
                     />
@@ -624,7 +634,7 @@ function App() {
                   <div className="arc-dc-image">
                     <img
                       className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/ba_logo.png"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/britishairways.jpg"
                       alt="British Airways"
                       loading="lazy"
                     />
@@ -633,9 +643,9 @@ function App() {
                 <swiper-slide>
                   <div className="arc-dc-image">
                     <img
-                      src="https://www2.arccorp.com/globalassets/homepage/redesign/ndc/etihad_logo.png"
-                      alt="Etihad Airlines"
-                      width="80"
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/brussels.jpg"
+                      alt="Brussels"
                       loading="lazy"
                     />
                   </div>
@@ -644,8 +654,8 @@ function App() {
                   <div className="arc-dc-image">
                     <img
                       className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/eva_logo.png"
-                      alt="Eva"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/copa.jpg"
+                      alt="copa"
                       loading="lazy"
                     />
                   </div>
@@ -654,8 +664,8 @@ function App() {
                   <div className="arc-dc-image">
                     <img
                       className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/iberia_logo.png"
-                      alt="Iberia"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/emirates.jpg"
+                      alt="Emirates"
                       loading="lazy"
                     />
                   </div>
@@ -664,7 +674,47 @@ function App() {
                   <div className="arc-dc-image">
                     <img
                       className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/klm_logo.png"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/etihad.jpg"
+                      alt="Etihad"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/eva.jpg"
+                      alt="eva"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/hawaiian.jpg"
+                      alt="hawaiian"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/iberia.jpg"
+                      alt="iberia"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/klm.jpg"
                       alt="KLM"
                       loading="lazy"
                     />
@@ -674,8 +724,8 @@ function App() {
                   <div className="arc-dc-image">
                     <img
                       className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/qatar_logo.png"
-                      alt="Qatar"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/latam.jpg"
+                      alt="LATAM"
                       loading="lazy"
                     />
                   </div>
@@ -684,8 +734,8 @@ function App() {
                   <div className="arc-dc-image">
                     <img
                       className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/sa_logo.png"
-                      alt="Qatar"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/lufthansa.jpg"
+                      alt="Lufthansa"
                       loading="lazy"
                     />
                   </div>
@@ -694,12 +744,73 @@ function App() {
                   <div className="arc-dc-image">
                     <img
                       className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/ua_logo.png"
-                      alt="Qatar"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/olympic.jpg"
+                      alt="olympic"
                       loading="lazy"
                     />
                   </div>
                 </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/qantas.jpg"
+                      alt="qantas"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/qatar.jpg"
+                      alt="qatar"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/singapore.jpg"
+                      alt="singapore"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/swiss.jpg"
+                      alt="Swiss"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/united.jpg"
+                      alt="United"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/westjet.jpg"
+                      alt="WestJet"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+               
               </swiper-container>
             </div>
           </div>

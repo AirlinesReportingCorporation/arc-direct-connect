@@ -106,7 +106,6 @@
   }
 
   #features {
-
     .bg-img-container {
       background-color: #000000;
       background-size: contain;
@@ -152,8 +151,12 @@
 
 .arc-dc-airline-logos {
   .arc-dc-image {
-    padding-left: 15px;
-    padding-right: 15px;
+    height: 65px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .swiper-horizontal {
@@ -162,8 +165,7 @@
   }
 
   img {
-    max-width: 170px;
-    max-height: 30px;
+    max-height: 65px;
   }
 }
 
