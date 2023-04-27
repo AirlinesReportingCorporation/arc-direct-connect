@@ -30,12 +30,6 @@ class App2 extends Component {
             prodLink={[
               {
                 alt: "Direct Connect Production Sheet",
-                copy: (
-                  <>
-                    Download an overview sheet
-                    <br /> of Direct Connect.
-                  </>
-                ),
                 cta: "Download",
                 header: (
                   <>
@@ -47,30 +41,29 @@ class App2 extends Component {
                 link: "https://www2.arccorp.com/globalassets/datasheets/DirectConnectwithNDC.pdf",
               },
               {
-                alt: "Access ARC's NDC Recordings",
-                copy: (
-                  <>
-                    View videos that further <br />
-                    explain the benefits of NDC.
-                  </>
-                ),
+                alt: "Access ARC's NDC Media Library",
                 header: (
                   <>
                     Access ARC’s <br />
                     NDC Recordings
                   </>
                 ),
-                cta: "Watch ",
+                cta: "Start Exploring",
                 icon: "https://www2.arccorp.com/globalassets/homepage/redesign/ndc/ndc-icon-2.png",
                 link: "https://www.youtube.com/playlist?list=PLf5REmQDokOmWX9wwbsFMTUDAwP5ih8LU",
               },
               {
-                alt: "Direct Connect Airline Capabilities Grid",
-                copy: "ARC provides advice, education and tools to help recognize and reduce fraud and mitigate risk.",
+                alt: "FAQs",
                 cta: "Learn More",
-                header: "Direct Connect Airline Capabilities Grid",
+                header: (
+                  <>
+                    FAQs
+                    <br />
+                    <br />
+                  </>
+                ),
                 icon: "https://www2.arccorp.com/globalassets/homepage/redesign/ndc/ndc-icon-3.png",
-                link: "https://www2.arccorp.com/direct-connect-ndc/#ndc-app",
+                link: "https://www2.arccorp.com/products-participation/distribution/arcdirectconnect/ndc-faqs/",
               },
             ]}
           />
