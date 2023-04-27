@@ -299,7 +299,7 @@ function App() {
               </div>
               <div className="arc-dc-switcher-windows">
                 <div className="row">
-                  <div className="col-4 animated bounce">
+                  <div className="col-4">
                     <div
                       onMouseEnter={() => handleSwitch("airlines")}
                       onClick={() => handleSwitch("airlines")}
