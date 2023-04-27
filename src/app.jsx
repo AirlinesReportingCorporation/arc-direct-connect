@@ -53,11 +53,7 @@ var switcherContent = {
         title: "Verify Participation Status",
         copy: (
           <>
-            Access ARC’s Ticketing Authority API,{" "}
-            <strong>available free of charge to airlines</strong> that report
-            and settle all <strong>NDC transactions via ARC</strong>, giving you
-            the assurance of knowing you’re working with an ARC-accredited
-            agency{" "}
+            Access ARC’s Ticketing Authority API, giving you the assurance of knowing you’re working with an ARC-accredited agency
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-1.png",
