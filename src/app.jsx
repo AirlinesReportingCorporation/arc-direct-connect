@@ -93,7 +93,7 @@ var switcherContent = {
             <strong>
               Ability to differentiate between NDC and GDS transactions
             </strong>{" "}
-            within IAR and on other agency reports
+            within IAR and other agency reports
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
