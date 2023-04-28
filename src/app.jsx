@@ -27,7 +27,7 @@ var switcherContent = {
         copy: (
           <>
             Distribute content to agencies using any aggregator or direct API,
-            whether NDC or another proprietary schema{" "}
+            whether NDC or another proprietary technology{" "}
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-7.png",
@@ -49,21 +49,19 @@ var switcherContent = {
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-5.png",
       },
       {
-        title: "Verify Participation Status",
+        title: "Payment Efficiencies",
         copy: (
           <>
-            Access ARC’s Ticketing Authority API, giving you the assurance of
-            knowing you’re working with an ARC-accredited agency
+            The option to report and settle with cash and credit forms of payment
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-1.png",
       },
       {
-        title: "Expedited Commissions",
+        title: "Enhanced Commission Processing ",
         copy: (
           <>
-            Upfront commission settlement on NDC transactions sent to ARC for
-            reporting and settlement purposes{" "}
+            Upfront commission settlement on NDC transactions sent to ARC; back-end commissions paid via credit memos. {" "}
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
@@ -83,11 +81,10 @@ var switcherContent = {
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-9.png",
       },
       {
-        title: "Expedited Commissions",
+        title: "Enhanced Commission Processing ",
         copy: (
           <>
-            Upfront commission settlement on NDC transactions sent to ARC for
-            reporting and settlement purposes{" "}
+            Upfront commission settlement on NDC transactions sent to ARC; back-end commissions paid via credit memos. 
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
@@ -150,11 +147,10 @@ var switcherContent = {
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-5.png",
       },
       {
-        title: "Back-Office Efficiency",
+        title: "Enhanced Commission Processing",
         copy: (
           <>
-            Upfront commission settlement on NDC transactions sent to ARC for
-            reporting and/or settlement purposes{" "}
+            Upfront commission settlement on NDC transactions sent to ARC; back-end commissions paid via credit memos.
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
@@ -537,7 +533,7 @@ function App() {
                     fontFamily: "SourceSansPro-Light",
                   }}
                 >
-                  ARC’s settlement features that support Direct Connect
+                  ARC’s settlement solutions that support Direct Connect
                   implementations:
                 </div>
               </div>
@@ -626,7 +622,7 @@ function App() {
                         alt="Flexible messaging schema options (NDC or proprietary)"
                       />
                       <div class="subcallout-card-copy">
-                        Flexible messaging schema options (NDC or proprietary)
+                      Access ARC’s Ticketing Authority API, giving you the assurance of knowing you’re working with an ARC-accredited agency 
                       </div>
                     </div>
                   </div>
