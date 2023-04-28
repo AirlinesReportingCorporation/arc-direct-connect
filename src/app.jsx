@@ -554,7 +554,7 @@ function App() {
             borderTop: "none",
           }}
         >
-          <div style={{ maxWidth: "815px" }}>
+          <div className="sub-callout-container-inner" style={{ maxWidth: "815px" }}>
             <div class="container">
               <div class="row align-items-center">
                 <div class="col-lg-6">
