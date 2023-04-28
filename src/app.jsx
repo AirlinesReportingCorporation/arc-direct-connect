@@ -61,7 +61,7 @@ var switcherContent = {
         title: "Enhanced Commission Processing ",
         copy: (
           <>
-            Upfront commission settlement on NDC transactions sent to ARC; back-end commissions paid via credit memos. {" "}
+            Upfront commission settlement on NDC transactions sent to ARC; back-end commissions paid via credit memos {" "}
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
@@ -84,7 +84,7 @@ var switcherContent = {
         title: "Enhanced Commission Processing ",
         copy: (
           <>
-            Upfront commission settlement on NDC transactions sent to ARC; back-end commissions paid via credit memos. 
+            Upfront commission settlement on NDC transactions sent to ARC; back-end commissions paid via credit memos 
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
@@ -150,7 +150,7 @@ var switcherContent = {
         title: "Enhanced Commission Processing",
         copy: (
           <>
-            Upfront commission settlement on NDC transactions sent to ARC; back-end commissions paid via credit memos.
+            Upfront commission settlement on NDC transactions sent to ARC; back-end commissions paid via credit memos
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
