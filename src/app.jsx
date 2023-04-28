@@ -253,8 +253,8 @@ function App() {
           { title: "News", url: "#news" },
         ]}
         target="_blank"
-        contactUs="Apply Now"
-        rightLink="https://www2.arccorp.com/globalassets/ndc/direct-connect-program-application_v10.pdf"
+        contactUs="Learn More"
+        rightLink="mailto:ndc@arccorp.com"
       />
 
       <ProductJumbo
@@ -459,7 +459,7 @@ function App() {
             <div className="arc-dc-support">
               <h2>Let us support your NDC journey.</h2>
               <a
-                href="https://www2.arccorp.com/globalassets/ndc/direct-connect-program-application_v10.pdf"
+                href="mailto:ndc@arccorp.com"
                 className="ctaBtn"
                 target="_blank"
               >
