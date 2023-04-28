@@ -55,7 +55,7 @@ var switcherContent = {
             The option to report and settle with cash and credit forms of payment
           </>
         ),
-        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-1.png",
+        icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/pe.png",
       },
       {
         title: "Enhanced Commission Processing ",
@@ -614,7 +614,7 @@ function App() {
                 </div>
               </div>
               <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-8" style={{margin: "auto"}}>
                   <div class="subcallout-card">
                     <div class="d-flex align-items-center">
                       <img
