@@ -320,10 +320,24 @@ function App() {
                           />
                         </div>
                       ) : (
+                        <div style={{ overflow: "hidden" }}>
                         <img
-                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-closed.png"
+                          className="dc-window-open top"
+                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png?1"
                           alt=""
                         />
+                        <img
+                          className="dc-window-open animated slideInDown"
+                          style={{bottom: "52px"}}
+                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-window.png"
+                          alt=""
+                        />
+                        <img
+                          className=""
+                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-airline.png"
+                          alt=""
+                        />
+                      </div>
                       )}
                       <div
                         className={
@@ -359,10 +373,24 @@ function App() {
                           />
                         </div>
                       ) : (
+                        <div style={{ overflow: "hidden" }}>
                         <img
-                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-closed.png"
+                          className="dc-window-open top"
+                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png?1"
                           alt=""
                         />
+                        <img
+                          className="dc-window-open animated slideInDown"
+                          style={{bottom: "52px"}}
+                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-window.png"
+                          alt=""
+                        />
+                        <img
+                          className=""
+                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-agency.png"
+                          alt=""
+                        />
+                      </div>
                       )}
                       <div
                         className={
@@ -404,10 +432,24 @@ function App() {
                           />
                         </div>
                       ) : (
+                        <div style={{ overflow: "hidden" }}>
                         <img
-                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-closed.png"
+                          className="dc-window-open top"
+                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png?1"
                           alt=""
                         />
+                        <img
+                          className="dc-window-open animated slideInDown"
+                          style={{bottom: "52px"}}
+                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-window.png"
+                          alt=""
+                        />
+                        <img
+                          className=""
+                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-corporate.png"
+                          alt=""
+                        />
+                      </div>
                       )}
                       <div
                         className={
