@@ -439,7 +439,7 @@ function App() {
                           alt=""
                         />
                         <img
-                          className="dc-window-open animated slideInDown"
+                          className="dc-window-open animated slideInDown corporate-window-cover"
                           style={{bottom: "52px"}}
                           src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-window.png"
                           alt=""
