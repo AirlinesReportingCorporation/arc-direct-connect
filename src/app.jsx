@@ -265,10 +265,9 @@ function App() {
         subtitle={
           <>
             <span>
-              We connect airlines, corporate buyers and travel agencies
+            We connect airlines with corporate buyers and travel agencies
             </span>
-            , giving them the freedom to implement distribution strategies in a
-            way that suits them best.
+            , giving them the freedom to implement distribution strategies that best suit their needs.
           </>
         }
         width="100%"
