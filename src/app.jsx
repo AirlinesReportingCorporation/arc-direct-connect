@@ -674,7 +674,7 @@ function App() {
         </div>
       </div>
 
-      <div className="arc-dc-airlines">
+      <div id="partners" className="arc-dc-airlines">
         <div className="container">
           <div className="col-lg-12">
             <h2>COMPANIES THAT PARTNER WITH ARC’S DIRECT CONNECT PROGRAM</h2>
@@ -908,7 +908,7 @@ function App() {
         </div>
       </div>
 
-      <div id="partners"></div>
+      
     </div>
   );
 }
