@@ -11,6 +11,7 @@ import Modal from "react-modal";
 import { PodcastWidget } from "podcast-widget";
 
 import { register } from "swiper/element/bundle";
+import FormDrawer from "./FormDrawer";
 // register Swiper custom elements
 register();
 
@@ -52,7 +53,8 @@ var switcherContent = {
         title: "Payment Efficiencies",
         copy: (
           <>
-            The option to report and settle with cash and credit forms of payment
+            The option to report and settle with cash and credit forms of
+            payment
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/pe.png",
@@ -61,7 +63,8 @@ var switcherContent = {
         title: "Enhanced Commission Processing ",
         copy: (
           <>
-            Upfront commission settlement on NDC transactions sent to ARC; back-end commissions paid via credit memos {" "}
+            Upfront commission settlement on NDC transactions sent to ARC;
+            back-end commissions paid via credit memos{" "}
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
@@ -84,7 +87,8 @@ var switcherContent = {
         title: "Enhanced Commission Processing ",
         copy: (
           <>
-            Upfront commission settlement on NDC transactions sent to ARC; back-end commissions paid via credit memos 
+            Upfront commission settlement on NDC transactions sent to ARC;
+            back-end commissions paid via credit memos
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
@@ -150,7 +154,8 @@ var switcherContent = {
         title: "Enhanced Commission Processing",
         copy: (
           <>
-            Upfront commission settlement on NDC transactions sent to ARC; back-end commissions paid via credit memos
+            Upfront commission settlement on NDC transactions sent to ARC;
+            back-end commissions paid via credit memos
           </>
         ),
         icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/switcher-12.png",
@@ -231,6 +236,7 @@ function App() {
 
   return (
     <div className="arc-dc-page" style={{ paddingBottom: "0" }}>
+      <FormDrawer />
       <Stickynav
         title={
           <>
@@ -265,9 +271,10 @@ function App() {
         subtitle={
           <>
             <span>
-            We connect airlines with corporate buyers and travel agencies
+              We connect airlines with corporate buyers and travel agencies
             </span>
-            , giving them the freedom to implement distribution strategies that best suit their needs.
+            , giving them the freedom to implement distribution strategies that
+            best suit their needs.
           </>
         }
         width="100%"
@@ -320,23 +327,23 @@ function App() {
                         </div>
                       ) : (
                         <div style={{ overflow: "hidden" }}>
-                        <img
-                          className="dc-window-open top"
-                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png?1"
-                          alt=""
-                        />
-                        <img
-                          className="dc-window-open animated slideInDown"
-                          style={{bottom: "52px"}}
-                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-window.png"
-                          alt=""
-                        />
-                        <img
-                          className=""
-                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-airline.png"
-                          alt=""
-                        />
-                      </div>
+                          <img
+                            className="dc-window-open top"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png?1"
+                            alt=""
+                          />
+                          <img
+                            className="dc-window-open animated slideInDown"
+                            style={{ bottom: "52px" }}
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-window.png"
+                            alt=""
+                          />
+                          <img
+                            className=""
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-airline.png"
+                            alt=""
+                          />
+                        </div>
                       )}
                       <div
                         className={
@@ -373,23 +380,23 @@ function App() {
                         </div>
                       ) : (
                         <div style={{ overflow: "hidden" }}>
-                        <img
-                          className="dc-window-open top"
-                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png?1"
-                          alt=""
-                        />
-                        <img
-                          className="dc-window-open animated slideInDown"
-                          style={{bottom: "52px"}}
-                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-window.png"
-                          alt=""
-                        />
-                        <img
-                          className=""
-                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-agency.png"
-                          alt=""
-                        />
-                      </div>
+                          <img
+                            className="dc-window-open top"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png?1"
+                            alt=""
+                          />
+                          <img
+                            className="dc-window-open animated slideInDown"
+                            style={{ bottom: "52px" }}
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-window.png"
+                            alt=""
+                          />
+                          <img
+                            className=""
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-agency.png"
+                            alt=""
+                          />
+                        </div>
                       )}
                       <div
                         className={
@@ -432,23 +439,23 @@ function App() {
                         </div>
                       ) : (
                         <div style={{ overflow: "hidden" }}>
-                        <img
-                          className="dc-window-open top"
-                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png?1"
-                          alt=""
-                        />
-                        <img
-                          className="dc-window-open animated slideInDown corporate-window-cover"
-                          style={{bottom: "52px"}}
-                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-window.png"
-                          alt=""
-                        />
-                        <img
-                          className=""
-                          src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-corporate.png"
-                          alt=""
-                        />
-                      </div>
+                          <img
+                            className="dc-window-open top"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-border.png?1"
+                            alt=""
+                          />
+                          <img
+                            className="dc-window-open animated slideInDown corporate-window-cover"
+                            style={{ bottom: "52px" }}
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-window.png"
+                            alt=""
+                          />
+                          <img
+                            className=""
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-corporate.png"
+                            alt=""
+                          />
+                        </div>
                       )}
                       <div
                         className={
@@ -591,7 +598,10 @@ function App() {
             borderTop: "none",
           }}
         >
-          <div className="sub-callout-container-inner" style={{ maxWidth: "815px" }}>
+          <div
+            className="sub-callout-container-inner"
+            style={{ maxWidth: "815px" }}
+          >
             <div class="container">
               <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -655,7 +665,7 @@ function App() {
                 </div>
               </div>
               <div class="row align-items-center">
-                <div class="col-lg-8" style={{margin: "auto"}}>
+                <div class="col-lg-8" style={{ margin: "auto" }}>
                   <div class="subcallout-card">
                     <div class="d-flex align-items-center">
                       <img
@@ -663,7 +673,9 @@ function App() {
                         alt="Flexible messaging schema options (NDC or proprietary)"
                       />
                       <div class="subcallout-card-copy">
-                      Access ARC’s Ticketing Authority API, giving you the assurance of knowing you’re working with an ARC-accredited agency 
+                        Access ARC’s Ticketing Authority API, giving you the
+                        assurance of knowing you’re working with an
+                        ARC-accredited agency
                       </div>
                     </div>
                   </div>
@@ -917,8 +929,6 @@ function App() {
           </div>
         </div>
       </div>
-
-      
     </div>
   );
 }
