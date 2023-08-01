@@ -6,7 +6,7 @@ export default function FormDrawer(props) {
   useEffect(() => {
     const timer = setTimeout(() => {
       console.log("setTimeout called!");
-      toggleForm();
+      setOpenForm(true);
     }, 120000);
 
     return () => clearTimeout(timer);
