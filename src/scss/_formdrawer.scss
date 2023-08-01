@@ -1,12 +1,19 @@
 .form-drawer {
   position: fixed;
   color: #ffffff;
-  bottom: 0;
-  right: 5%;
+  bottom: 100px;
+  right: 0;
   width: 370px;
   background: #2a2b2c;
   z-index: 5;
+  width: 370px;
   font-family: SourceSansPro-Regular, Arial, Helvetica, sans-serif;
+
+  &.open {
+    .form-drawer-toggle {
+      right: 320px;
+    }
+  }
 }
 
 .form-drawer label {
@@ -32,23 +39,33 @@
 }
 
 .form-drawer-toggle {
+  font-family: SourceSansPro-SemiBold, Arial, Helvetica, sans-serif;
+  position: absolute;
+  bottom: 50px;
+  //left: 30px;
+  right: -50px;
+  transform: rotate(-90deg);
   cursor: pointer;
   text-align: center;
-  width: 100%;
+  width: 150px;
+  height: 50px;
   padding: 15px 15px;
   background: #189bb0;
 }
 
 .form-drawer-content {
-  max-height: 0;
-  transition: 2s ease;
+  max-height: auto;
+  max-width: 0;
+  transition: width 2s;
   padding: 15px 30px;
+  max-height: 500px;
+  overflow: hidden;
 
   &.show {
-    max-height: none;
+    width: 370px;
+    max-width: none;
   }
   &.hide {
-    max-height: 0;
-
+    max-width: 0;
   }
 }
