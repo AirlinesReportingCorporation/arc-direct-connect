@@ -184,6 +184,7 @@ function App() {
   useEffect(() => {
     const swiperContainer = swiperElRef.current;
     const params = {
+      autoplay: true,
       navigation: true,
       loop: true,
       slidesPerView: 1,
