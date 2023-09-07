@@ -168,8 +168,14 @@ function App() {
   const swiperElRef = useRef(null);
   const [switcher, setSwitcher] = useState("airlines");
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [videourl, setVideourl] = useState("");
 
-  function openModal() {
+  function openModal(type) {
+    if (type == "video1") {
+      setVideourl("https://www.youtube.com/embed/sWvanO3kOCI");
+    } else {
+      setVideourl("https://www.youtube.com/embed/gkoAkfirGsM");
+    }
     setIsOpen(true);
   }
 
@@ -520,11 +526,16 @@ function App() {
           <>
             <div className="row" style={{ marginTop: "60px" }}>
               <div className="col-lg-6">
-                <PodcastWidget />
+                <div
+                  className="arc-dc-video"
+                  onClick={() => openModal("video1")}
+                >
+                  <img src="https://www2.arccorp.com/globalassets/homepage/redesign/webinar/webinar-083123.jpg" />
+                </div>
               </div>
               <div className="col-lg-6">
-                <div className="arc-dc-video" onClick={openModal}>
-                  <img src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-video.png" />
+                <div className="arc-dc-video" onClick={() => openModal("")}>
+                  <img src="https://www2.arccorp.com/globalassets/homepage/redesign/webinar/webinar-060823.jpg" />
                 </div>
               </div>
             </div>
@@ -551,7 +562,7 @@ function App() {
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/p-AwIJmxnuc?&autoplay=1"
+            src={videourl + "?&autoplay=1"}
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
