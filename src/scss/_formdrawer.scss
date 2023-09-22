@@ -3,15 +3,14 @@
   color: #ffffff;
   bottom: 100px;
   right: 0;
-  width: 370px;
   background: #2a2b2c;
   z-index: 6;
-  width: 370px;
+  width: 240px;
   font-family: SourceSansPro-Regular, Arial, Helvetica, sans-serif;
 
   &.open {
     .form-drawer-toggle {
-      right: 320px;
+      right: 190px;
     }
   }
 }
@@ -57,12 +56,13 @@
   max-height: auto;
   max-width: 0;
   transition: width 2s;
-  padding: 15px 30px;
-  max-height: 500px;
-  overflow: hidden;
+  padding: 0px 15px;
+  max-height: 320px;
+  overflow: scroll;
+
 
   &.show {
-    width: 370px;
+    width: 240px;
     max-width: none;
   }
   &.hide {
