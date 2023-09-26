@@ -27,6 +27,16 @@ var quotes = [
     id="quote2"
     quote="We are happy to partner with ARC on this important milestone on our NDC journey. Adoption of NDC with ARC benefits our joint travel agency network and ultimately enhances customer experience and allows more choice for customers."
   />,
+  <ProductQuote
+    author="Rolando Damas"
+    title="Sales Director, North America, Central America, and the Caribbean"
+    backgroundImage="https://www2.arccorp.com/globalassets/products--participation/direct-connect/ndc-quote3.jpg"
+    className="arc-dc-product-quote"
+    company="Avianca"
+    id="quote2"
+    quote="As Avianca’s distribution strategy evolved, we needed an NDC solution that allows us to meet the needs of our customers. ARC Direct Connect enables us to offer a consistent shopping experience across channels while leading to more personalized traveler bookings.
+    "
+  />,
 ];
 
 class App2 extends Component {
