@@ -720,6 +720,16 @@ function App() {
                   <div className="arc-dc-image">
                     <img
                       className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/airdolomiti.jpg"
+                      alt="Air Dolomiti"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
                       src="https://www2.arccorp.com/globalassets/products--participation/ndc/american.jpg"
                       alt="American Airlines"
                       loading="lazy"
@@ -892,6 +902,16 @@ function App() {
                       className="img-fluid"
                       src="https://www2.arccorp.com/globalassets/products--participation/ndc/qatar.jpg"
                       alt="qatar"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/SAS.jpg"
+                      alt="Scandinavian Airlines"
                       loading="lazy"
                     />
                   </div>
