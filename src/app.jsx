@@ -705,6 +705,16 @@ function App() {
 
             <div className="arc-dc-airline-logos">
               <swiper-container init="false" ref={swiperElRef}>
+              <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/airdolomiti.jpg"
+                      alt="Air Dolomiti"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
                 <swiper-slide>
                   <div className="arc-dc-image">
                     <img
@@ -713,16 +723,6 @@ function App() {
                       alt="Air France"
                       loading="lazy"
                       //style={{ paddingRight: "50px", paddingBottom: "18px;" }}
-                    />
-                  </div>
-                </swiper-slide>
-                <swiper-slide>
-                  <div className="arc-dc-image">
-                    <img
-                      className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/airdolomiti.jpg"
-                      alt="Air Dolomiti"
-                      loading="lazy"
                     />
                   </div>
                 </swiper-slide>
