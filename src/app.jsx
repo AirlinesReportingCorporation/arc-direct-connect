@@ -259,7 +259,6 @@ function App() {
           { title: "Multimedia", url: "#media" },
           { title: "Partners", url: "#partners" },
           { title: "Resources", url: "#resources" },
-          { title: "News", url: "#news" },
         ]}
         target="_blank"
         contactUs="Learn More"
