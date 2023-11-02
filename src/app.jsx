@@ -749,7 +749,7 @@ function App() {
                   <div className="arc-dc-image">
                     <img
                       className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/avianca.jpg"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/avianca.png"
                       alt="Avianca"
                       loading="lazy"
                     />
