@@ -869,6 +869,17 @@ function App() {
                   <div className="arc-dc-image">
                     <img
                       className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/lot_logo.png"
+                      alt="LOT"
+                      loading="lazy"
+                      //style={{ paddingRight: "50px", paddingBottom: "18px;" }}
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
                       src="https://www2.arccorp.com/globalassets/products--participation/ndc/lufthansa.jpg"
                       alt="Lufthansa"
                       loading="lazy"
