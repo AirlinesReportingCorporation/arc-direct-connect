@@ -327,7 +327,7 @@ function App() {
                           />
                           <img
                             className=""
-                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-airline.png"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-airline.jpg"
                             alt=""
                           />
                         </div>
@@ -346,7 +346,7 @@ function App() {
                           />
                           <img
                             className=""
-                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-airline.png"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-airline.jpg"
                             alt=""
                           />
                         </div>
@@ -380,7 +380,7 @@ function App() {
                             alt=""
                           />
                           <img
-                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-agency.png"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-agency.jpg"
                             alt=""
                           />
                         </div>
@@ -399,7 +399,7 @@ function App() {
                           />
                           <img
                             className=""
-                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-agency.png"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-agency.jpg"
                             alt=""
                           />
                         </div>
@@ -439,7 +439,7 @@ function App() {
                           />
                           <img
                             className="animate fadeIn"
-                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-corporate.png"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-corporate.jpg"
                             alt=""
                           />
                         </div>
@@ -458,7 +458,7 @@ function App() {
                           />
                           <img
                             className=""
-                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-corporate.png"
+                            src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-corporate.jpg"
                             alt=""
                           />
                         </div>
