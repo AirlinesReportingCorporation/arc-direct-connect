@@ -1,9 +1,6 @@
 import React, { Component } from "react";
+
 import {
-  Stickynav,
-  ProductJumbo,
-  ProductText,
-  ProductCallout,
   ProductQuote,
   ProductLinks,
 } from "arccorp-vars";
@@ -48,7 +45,9 @@ class App2 extends Component {
   }
 
   componentDidMount() {
-    this.setState({ randomQuoteIndex: Math.floor(Math.random() * quotes.length) });
+    this.setState({
+      randomQuoteIndex: Math.floor(Math.random() * quotes.length),
+    });
   }
 
   randomQuote() {

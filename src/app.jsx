@@ -1,9 +1,9 @@
 import React, { Component, useRef, useEffect, useState } from "react";
+
 import {
   Stickynav,
   ProductJumbo,
   ProductText,
-  ProductCallout,
 } from "arccorp-vars";
 
 import Modal from "react-modal";
@@ -259,8 +259,8 @@ function App() {
           { title: "Resources", url: "#resources" },
         ]}
         target="_blank"
-        contactUs="Learn More"
-        rightLink="mailto:ndc@arccorp.com"
+        stickyCTA="Learn More"
+        stickyCTALink="mailto:ndc@arccorp.com"
       />
 
       <ProductJumbo

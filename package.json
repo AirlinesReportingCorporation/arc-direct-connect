@@ -29,7 +29,7 @@
     "webpack-merge": "^5.1.1"
   },
   "dependencies": {
-    "arccorp-vars": "^0.2.6",
+    "arccorp-vars": "^0.2.7",
     "node-polyfill-webpack-plugin": "^1.1.4",
     "react": "^16.13.1",
     "react-app-polyfill": "^1.0.6",
