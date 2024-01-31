@@ -8,8 +8,6 @@ import {
 
 import Modal from "react-modal";
 
-import { PodcastWidget } from "podcast-widget";
-
 import { register } from "swiper/element/bundle";
 import FormDrawer from "./FormDrawer";
 // register Swiper custom elements
