@@ -968,6 +968,16 @@ function App() {
                   <div className="arc-dc-image">
                     <img
                       className="img-fluid"
+                      src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/tap.png"
+                      alt="TAP"
+                      loading="lazy"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div className="arc-dc-image">
+                    <img
+                      className="img-fluid"
                       src="https://www2.arccorp.com/globalassets/products--participation/ndc/united.png"
                       alt="United"
                       loading="lazy"
