@@ -1,16 +1,18 @@
-.active {
-  background: #212122;
-  color: #fff;
-}
+#ndc-app {
+  .active {
+    background: #212122;
+    color: #fff;
+  }
 
-.open {
-  stroke: white;
-}
+  .open {
+    stroke: white;
+  }
 
-.closed {
-  background: inherit;
-  color: #212122;
-  stroke: black;
+  .closed {
+    background: inherit;
+    color: #212122;
+    stroke: black;
+  }
 }
 
 .apProfile {
