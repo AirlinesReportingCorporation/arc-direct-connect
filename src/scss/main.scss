@@ -146,7 +146,7 @@
   text-align: center;
 
   .container {
-    border-bottom: 1px solid;
+    //border-bottom: 1px solid;
     padding-bottom: 60px;
   }
 
@@ -159,14 +159,18 @@
   }
 }
 
+.arc-dc-image {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+}
+
 .arc-dc-airline-logos {
   .arc-dc-image {
-    height: 65px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
+
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 10px;
   }
 
   .swiper-horizontal {
@@ -183,6 +187,11 @@
 .swiper-button-prev {
   color: #2a2b2c !important;
   display: none;
+}
+
+.hiddenanchor {
+  position: absolute;
+  top: -70px;
 }
 
 .arc-dc-header {
@@ -241,7 +250,7 @@
     &.top {
       top: 0;
       bottom: auto;
-      z-index:2;
+      z-index: 2;
     }
   }
 
@@ -463,7 +472,28 @@ img.access-item-icon {
   }
 }
 
-@media screen  and (min-width: 1260px) {
+.airline-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.expand {
+  font-size: 25px;
+  cursor: pointer;
+  text-align: right;
+  margin-right: 5px;
+  background-color: #fff;
+  border: none;
+}
+
+@media screen and (max-width: 1260px) {
+  #ndc-app .apSectionBottom .apButton {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
   .sub-callout-container-inner {
     margin-left: -20px;
   }
@@ -476,8 +506,9 @@ img.access-item-icon {
   }
 
   .corporate-window-cover {
-    bottom: 84px !important
+    bottom: 84px !important;
   }
 }
 
-@import "formdrawer"; 
+@import "formdrawer";
+@import "airline";

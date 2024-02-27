@@ -4,14 +4,18 @@ import {
   Stickynav,
   ProductJumbo,
   ProductText,
+  ProductQuote,
+  ProductLinks,
 } from "arccorp-vars";
 
 import Modal from "react-modal";
 
-import { register } from "swiper/element/bundle";
+import axios from "axios";
+import XLSX from "xlsx";
+
 import FormDrawer from "./FormDrawer";
+import Airline from "./components/Airline";
 // register Swiper custom elements
-register();
 
 var switcherContent = {
   airlines: {
@@ -162,11 +166,46 @@ var switcherContent = {
   },
 };
 
+var quotes = [
+  <ProductQuote
+    author="Simon Brooks"
+    title="Senior Vice President, Sales for North America"
+    backgroundImage="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-quote.png"
+    className="arc-dc-product-quote"
+    company="British Airways"
+    id="quote"
+    quote="British Airways is excited to be the first test partner for ARC's enhanced settlement functionality, which enables us to evolve our distribution strategy with  the travel agency channel. ARC has always been a trusted partner to British Airways, and we have valued  their flexibility, responsiveness and collaboration  during this testing process. These enhancements  will aid us in developing our relationships with  agencies, and they set the stage for our growing  distribution stratetgy in the U.S."
+  />,
+  <ProductQuote
+    author="Jenni Suomela"
+    title="Vice President of Global Sales and Channel Management"
+    backgroundImage="https://www2.arccorp.com/globalassets/products--participation/direct-connect/ndc-quote2.png"
+    className="arc-dc-product-quote"
+    company="Finnair"
+    id="quote2"
+    quote="We are happy to partner with ARC on this important milestone on our NDC journey. Adoption of NDC with ARC benefits our joint travel agency network and ultimately enhances customer experience and allows more choice for customers."
+  />,
+  <ProductQuote
+    author="Rolando Damas"
+    title="Sales Director, North America, Central America, and the Caribbean"
+    backgroundImage="https://www2.arccorp.com/globalassets/products--participation/direct-connect/ndc-quote3.jpg"
+    className="arc-dc-product-quote"
+    company="Avianca"
+    id="quote2"
+    quote="As Avianca’s distribution strategy evolved, we needed an NDC solution that allows us to meet the needs of our customers. ARC Direct Connect enables us to offer a consistent shopping experience across channels while leading to more personalized traveler bookings.
+    "
+  />,
+];
+
 function App() {
-  const swiperElRef = useRef(null);
   const [switcher, setSwitcher] = useState("airlines");
   const [modalIsOpen, setIsOpen] = useState(false);
   const [videourl, setVideourl] = useState("");
+  const [randomQuoteIndex, setRandomQuoteIndex] = useState(
+    Math.floor(Math.random() * quotes.length)
+  );
+
+  const [ndcAirlines, setNDCAirlines] = useState([]);
 
   function openModal(type) {
     if (type == "video1") {
@@ -186,57 +225,58 @@ function App() {
   }
 
   useEffect(() => {
-    const swiperContainer = swiperElRef.current;
-    const params = {
-      autoplay: true,
-      navigation: true,
-      loop: true,
-      slidesPerView: 1,
-      speed: 500,
-      cssMode: true,
-      breakpoints: {
-        766: {
-          slidesPerView: 2,
-        },
-        959: {
-          slidesPerView: 3,
-        },
-        1260: {
-          slidesPerView: 4,
-        },
-      },
-      //add this
-      injectStyles: [
-        `
-          .swiper-button-next,
-          .swiper-button-prev {
-            color: #2a2b2c;
-          }
-          .swiper-wrapper {
-            overflow: hidden;
-          }
-          .swiper-button-prev:after {
-            content: '';
-            background: url(https://www2.arccorp.com/globalassets/ndc/left.png);
-            height: 13px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 19px;
-          }
-          .swiper-button-next:after {
-            content: '';
-            background: url(https://www2.arccorp.com/globalassets/ndc/right.png);
-            height: 13px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 19px;
-          }
-      `,
-      ],
-    };
+    axios({
+      method: "get",
+      url:
+        "https://www2.arccorp.com/globalassets/products--participation/direct-connect/data.xlsx?" +
+        new Date().toLocaleString(),
+      responseType: "arraybuffer",
+    }).then(function (response) {
+      console.log("===== All NDC Airline Data Chart Loaded ===== ");
+      var data = new Uint8Array(response.data);
+      var workbook = XLSX.read(data, { type: "array" });
 
-    Object.assign(swiperContainer, params);
-    swiperContainer.initialize();
+      var workbookData = workbook["Sheets"]["Sheet1"];
+
+      var json = XLSX.utils.sheet_to_json(workbookData, {
+        raw: false,
+      });
+
+      var airline = XLSX.utils
+        .sheet_to_json(workbookData)
+        .sort((a, b) => a["Airline Name"].localeCompare(b["Airline Name"]));
+
+      console.log(airline);
+
+      let airlineCombined = [];
+
+      var current = "";
+      var next = "";
+
+      for (let i = 0; i < airline.length; i++) {
+        const element = airline[i];
+        var current = element;
+        if (i < airline.length - 1) {
+          next = airline[i + 1];
+          if (current["Numeric Code"] === next["Numeric Code"]) {
+            airlineCombined.push([current, next]);
+          } else if (
+            i > 0 &&
+            airline[i - 1]["Numeric Code"] !== current["Numeric Code"]
+          ) {
+            airlineCombined.push([current]);
+          } else if (i == 0) {
+            airlineCombined.push([current]);
+          }
+        } else {
+          airlineCombined.push([current]);
+        }
+      }
+
+      console.log(airlineCombined);
+
+      setNDCAirlines(airlineCombined);
+    });
   }, []);
 
   return (
@@ -266,12 +306,7 @@ function App() {
       <ProductJumbo
         className="arc-dc-jumbo"
         backgroundImage="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-jumbo.png"
-        title={
-          <>
-            ARC is <br />
-            NDC-Ready
-          </>
-        }
+        title={<>Unlock The Power of Distribution and NDC</>}
         subtitle={
           <>
             <span>
@@ -701,68 +736,350 @@ function App() {
             <h2>COMPANIES THAT PARTNER WITH ARC’S DIRECT CONNECT PROGRAM</h2>
 
             <div className="arc-dc-airline-logos">
-              <swiper-container init="false" ref={swiperElRef}>
-                <swiper-slide>
-                  <div className="arc-dc-image">
-                    <img
-                      className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/aircanada.jpg"
-                      alt="Air Canada"
-                      loading="lazy"
-                    />
-                  </div>
-                </swiper-slide>
-                <swiper-slide>
-                  <div className="arc-dc-image">
-                    <img
-                      className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/airdolomiti.jpg"
-                      alt="Air Dolomiti"
-                      loading="lazy"
-                    />
-                  </div>
-                </swiper-slide>
-                <swiper-slide>
-                  <div className="arc-dc-image">
-                    <img
-                      className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/airfrance.jpg"
-                      alt="Air France"
-                      loading="lazy"
-                      //style={{ paddingRight: "50px", paddingBottom: "18px;" }}
-                    />
-                  </div>
-                </swiper-slide>
-                <swiper-slide>
-                  <div className="arc-dc-image">
-                    <img
-                      className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/american.jpg"
-                      alt="American Airlines"
-                      loading="lazy"
-                    />
-                  </div>
-                </swiper-slide>
-                <swiper-slide>
-                  <div className="arc-dc-image">
-                    <img
-                      className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/austrian.jpg"
-                      alt="Austrian"
-                      loading="lazy"
-                    />
-                  </div>
-                </swiper-slide>
-                <swiper-slide>
-                  <div className="arc-dc-image">
-                    <img
-                      className="img-fluid"
-                      src="https://www2.arccorp.com/globalassets/products--participation/ndc/avianca.png"
-                      alt="Avianca"
-                      loading="lazy"
-                    />
-                  </div>
-                </swiper-slide>
+              <div className="row mb-5">
+                <div className="col-lg-3">
+                  <a href="#air_canada">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/aircanada.jpg"
+                        alt="Air Canada"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#air_dolomiti">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/airdolomiti.jpg"
+                        alt="Air Dolomiti"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#air_france">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/airfrance.jpg"
+                        alt="Air France"
+                        loading="lazy"
+                        //style={{ paddingRight: "50px", paddingBottom: "18px;" }}
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#american_airlines">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/american.jpg"
+                        alt="American Airlines"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#austrian_airlines">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/austrian.jpg"
+                        alt="Austrian"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#avianca">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/avianca.png"
+                        alt="Avianca"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+
+                <div className="col-lg-3">
+                  <a href="#british_airways">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/britishairways.jpg"
+                        alt="British Airways"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#brussels_airlines">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/brussels.jpg"
+                        alt="Brussels"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#copa_airlines">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/copa.jpg"
+                        alt="copa"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#emirates">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/emirates.jpg"
+                        alt="Emirates"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#etihad">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/etihad.jpg"
+                        alt="Etihad"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#eva_airways">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/eva.jpg"
+                        alt="eva"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#finnair">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/finnair.png"
+                        alt="Finnair"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#hawaiian_airlines">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/hawaiian.jpg"
+                        alt="Hawaiian Ailines"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#iberia">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/iberia.jpg"
+                        alt="iberia"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#kenya__airways">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/KA.png"
+                        alt="Kenya"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#klm">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/klm.jpg"
+                        alt="KLM"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#latam">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/latam.jpg"
+                        alt="latam"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#log">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/lot_logo.png"
+                        alt="LOT"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#lufthansa">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/lufthansa.jpg"
+                        alt="lufthansa"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#olympic_air">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/olympic.jpg"
+                        alt="Olympic"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#qantas">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/qantas.jpg"
+                        alt="qantas"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#scandinavian_airlines">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/SAS.jpg"
+                        alt="Scandinavian Airlines"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#singapore_airlines">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/singapore.jpg"
+                        alt="Singapore Airlines"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#swiss">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/swiss.jpg"
+                        alt="Swiss"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#tap_portugal">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/direct-connect/tap.png"
+                        alt="TAC"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#United">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/swiss.jpg"
+                        alt="Swiss"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div className="col-lg-3">
+                  <a href="#westjet">
+                    <div className="arc-dc-image">
+                      <img
+                        className="img-fluid"
+                        src="https://www2.arccorp.com/globalassets/products--participation/ndc/westjet.jpg"
+                        alt="Westjet"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              {/* <swiper-container init="false" ref={swiperElRef}>
+\
+                
                 <swiper-slide>
                   <div className="arc-dc-image">
                     <img
@@ -984,10 +1301,81 @@ function App() {
                     />
                   </div>
                 </swiper-slide>
-              </swiper-container>
+              </swiper-container> */}
+            </div>
+
+            <div class="row align-items-center">
+              <div class="offset-lg-2 col-lg-8 ml-auto mr-auto">
+                <div
+                  class="product-callout-copy text-align-center"
+                  style={{
+                    "font-size": "18px",
+                    "line-height": "24px",
+                    "margin-bottom": "30px",
+                    color: "#868b8c",
+                  }}
+                >
+                  Below are the details on the airlines currently participating
+                  in ARC Direct Connect.
+                </div>
+              </div>
+            </div>
+
+            <div id="ndc-app" className="arc-dc-grid">
+              {ndcAirlines.map((a) => {
+                return <Airline airline={a} />;
+              })}
             </div>
           </div>
         </div>
+      </div>
+
+      {quotes[randomQuoteIndex]}
+
+      <div id="resources">
+        <ProductLinks
+          colClass="col-lg-4"
+          prodLink={[
+            {
+              alt: "Direct Connect Production Sheet",
+              cta: "Download",
+              header: (
+                <>
+                  Direct Connect <br />
+                  Product Sheet
+                </>
+              ),
+              icon: "https://www2.arccorp.com/globalassets/products--participation/direct-connect/ndc-icon-1.png",
+              link: "https://www2.arccorp.com/globalassets/datasheets/DirectConnectwithNDC.pdf",
+              direction: "down",
+            },
+            {
+              alt: "Access ARC's NDC Media Library",
+              header: (
+                <>
+                  Access ARC’s <br />
+                  NDC Recordings
+                </>
+              ),
+              cta: "Start Exploring",
+              icon: "https://www2.arccorp.com/globalassets/homepage/redesign/ndc/ndc-icon-2.png",
+              link: "https://www.youtube.com/playlist?list=PLf5REmQDokOmWX9wwbsFMTUDAwP5ih8LU",
+            },
+            {
+              alt: "FAQs",
+              cta: "Learn More",
+              header: (
+                <>
+                  FAQs
+                  <br />
+                  <br />
+                </>
+              ),
+              icon: "https://www2.arccorp.com/globalassets/homepage/redesign/ndc/ndc-icon-3.png",
+              link: "https://www2.arccorp.com/products-participation/distribution/arcdirectconnect/ndc-faqs/",
+            },
+          ]}
+        />
       </div>
     </div>
   );

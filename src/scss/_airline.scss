@@ -1,0 +1,192 @@
+.active {
+  background: #212122;
+  color: #fff;
+}
+
+.open {
+  stroke: white;
+}
+
+.closed {
+  background: inherit;
+  color: #212122;
+  stroke: black;
+}
+
+.apProfile {
+  color: #129bb2;
+  font-family: SourceSansPro-Bold, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  pointer-events: all;
+  position: relative;
+  position: absolute;
+  z-index: 99999999;
+  right: 15px;
+}
+
+.apProfile i {
+  font-size: 11px;
+  margin-left: 3px;
+}
+.accordion.container {
+  cursor: pointer;
+}
+
+.product-accordion-top:hover,
+.closed:hover {
+  background: #dddddd;
+}
+
+.product-accordion-top {
+  font-family: SourceSansPro-Regular, Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+.airline-accordion {
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#ndc-app .product-accordion-start {
+  position: relative;
+  z-index: 5;
+  padding: 20px;
+}
+
+.expand {
+  max-width: 30px;
+  font-size: 25px;
+  cursor: pointer;
+  text-align: right;
+  margin-right: 5px;
+  border: none;
+  stroke-width: 25px;
+}
+
+#ndc-app .product-accordion-row .col-1 {
+  flex: 0 0 5%;
+  max-width: 5%;
+}
+
+#ndc-app .product-accordion-row {
+  margin-bottom: 0 !important;
+}
+
+#ndc-app .product-accordion-start {
+  z-index: 2;
+}
+
+.air-designator {
+  font-family: SourceSansPro-SemiBold, Arial, Helvetica, sans-serif;
+  background: #1d9cb1;
+  width: 90px;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+#ndc-app .product-accordion-row {
+  margin-bottom: 0 !important;
+}
+
+.air-code {
+  font-family: SourceSansPro-SemiBold, Arial, Helvetica, sans-serif;
+  width: 90px;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  background: #c5b593;
+  margin-right: 30px;
+}
+
+.air-name {
+  font-family: SourceSansPro-SemiBold, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.air-name-sub {
+  font-family: SourceSansPro-SemiBold, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #888888;
+}
+
+.via-container {
+  overflow: hidden;
+}
+.via-tag {
+  font-family: SourceSansPro-SemiBold, Arial, Helvetica, sans-serif;
+  margin-top: 30px;
+  color: #f77f00;
+  font-size: 14px;
+  text-align: left;
+  position: relative;
+}
+
+.apExpand {
+  font-size: 25px;
+  cursor: pointer;
+  text-align: right;
+  margin-right: 5px;
+}
+
+.ap-open {
+  background: url(https://www2.arccorp.com/globalassets/airline-participation/open.png)
+    center center no-repeat;
+  width: 22px;
+  height: 14px;
+}
+
+.ap-close {
+  background: url(https://www2.arccorp.com/globalassets/airline-participation/close.png)
+    center center no-repeat;
+  width: 22px;
+  height: 14px;
+}
+
+.via-tag:after {
+  content: "";
+  border-top: 1px solid #f77f00;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 100px;
+  left: 110px;
+}
+
+.via-tag.accelya:after {
+  left: 75px;
+}
+
+.air-updated {
+  color: #888;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: SourceSansPro-Bold, Arial, Helvetica, sans-serif;
+  margin-right: 0;
+}
+
+.air-updated span {
+  font-family: SourceSansPro-Regular, Arial, Helvetica, sans-serif;
+}
+
+.arc-dc-airlines #ndc-app .container {
+  padding-bottom: 15px;
+}
+
+.card-sasi {
+  max-width: 80px !important;
+  width: auto !important;
+  margin-top: 14px !important;
+}
+
+@media screen and (max-width: 1250px) {
+  .apSectionTop .apButton {
+    font-size: 15px !important;
+  }
+}
