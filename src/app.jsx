@@ -305,8 +305,8 @@ function App() {
 
       <ProductJumbo
         className="arc-dc-jumbo"
-        backgroundImage="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-jumbo.png"
-        title={<>Unlock The Power of Distribution and NDC</>}
+        backgroundImage="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-jumbo.jpg"
+        title={<>Unlock The Power<br/> of Distribution <br/> and NDC</>}
         subtitle={
           <>
             <span>
