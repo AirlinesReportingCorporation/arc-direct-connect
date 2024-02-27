@@ -503,6 +503,11 @@ img.access-item-icon {
   .arc-dc-bg,
   .arc-dc-jumbo {
     padding-top: 200px;
+    background-position: top;
+
+    .product-header {
+      font-size: 78px;
+    }
   }
 
   .corporate-window-cover {
