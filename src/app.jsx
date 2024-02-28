@@ -745,22 +745,33 @@ function App() {
           </div>
           <div className="row text-center">
             <div className="col-lg-4">
-              <div className="callout-border-section">
+              <div className="mt-5">
+                <img src="https://www2.arccorp.com/js-static/images/retaillocations.png" />
                 <div class="arc-dc-stat">64</div>
                 <div className="arc-dc-stat-sub">Agencies</div>
               </div>
             </div>
             <div className="col-lg-4">
-              <div className="callout-border-section">
+              <div className="mt-5">
+                <img src="https://www2.arccorp.com/js-static/images/carriers.png" />
                 <div class="arc-dc-stat">29</div>
                 <div className="arc-dc-stat-sub">Participating Airlines</div>
               </div>
             </div>
             <div className="col-lg-4">
-              <div className="callout-border-section">
+              <div className="mt-5">
+                <img
+                  src="https://www2.arccorp.com/js-static/images/avgdailysales.png"
+                  alt=""
+                />
                 <div class="arc-dc-stat">16.9%</div>
                 <div className="arc-dc-stat-sub">of Total Transactions</div>
               </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <hr />
             </div>
           </div>
         </div>
