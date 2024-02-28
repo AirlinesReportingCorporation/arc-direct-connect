@@ -739,8 +739,8 @@ function App() {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <h2 className="mb-0">System Information</h2>
-              <div style={{ color: "#5d5c68" }}>*as of December 2019</div>
+              <h2 className="mb-0">Direct Connect Program Statistics</h2>
+              <div style={{ color: "#5d5c68" }}>*as of February 2024</div>
             </div>
           </div>
           <div className="row text-center">
