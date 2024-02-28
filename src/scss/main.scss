@@ -29,6 +29,23 @@
   }
 }
 
+.arc-dc-stat {
+  font-family: SourceSansPro-Bold, Arial, Helvetica, sans-serif;
+  font-size: 72px;
+  line-height: 1;
+  margin-top: 30px;
+  
+}
+
+.arc-dc-stat-sub {
+  font-family: SourceSansPro-SemiBold, Arial, Helvetica, sans-serif;
+  color: #868b8c;
+  font-size: 22px;
+  line-height: 30px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
 .usa-embed-container {
   position: relative;
 
@@ -167,7 +184,6 @@
 
 .arc-dc-airline-logos {
   .arc-dc-image {
-
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 10px;

@@ -306,7 +306,12 @@ function App() {
       <ProductJumbo
         className="arc-dc-jumbo"
         backgroundImage="https://www2.arccorp.com/globalassets/products--participation/direct-connect/arc-dc-jumbo.jpg"
-        title={<>Unlock The Power<br/> of Distribution <br/> and NDC</>}
+        title={
+          <>
+            Unlock The Power
+            <br /> of Distribution <br /> and NDC
+          </>
+        }
         subtitle={
           <>
             <span>
@@ -731,6 +736,34 @@ function App() {
       </div>
 
       <div id="partners" className="arc-dc-airlines">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <h2 className="mb-0">System Information</h2>
+              <div style={{ color: "#5d5c68" }}>*as of December 2019</div>
+            </div>
+          </div>
+          <div className="row text-center">
+            <div className="col-lg-4">
+              <div className="callout-border-section">
+                <div class="arc-dc-stat">64</div>
+                <div className="arc-dc-stat-sub">Agencies</div>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className="callout-border-section">
+                <div class="arc-dc-stat">29</div>
+                <div className="arc-dc-stat-sub">Participating Airlines</div>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className="callout-border-section">
+                <div class="arc-dc-stat">16.9%</div>
+                <div className="arc-dc-stat-sub">of Total Transactions</div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="container">
           <div className="col-lg-12">
             <h2>COMPANIES THAT PARTNER WITH ARC’S DIRECT CONNECT PROGRAM</h2>
