@@ -747,7 +747,7 @@ function App() {
             <div className="col-lg-4">
               <div className="mt-5">
                 <img src="https://www2.arccorp.com/js-static/images/retaillocations.png" />
-                <div class="arc-dc-stat">64</div>
+                <div class="arc-dc-stat">645</div>
                 <div className="arc-dc-stat-sub">Agencies</div>
               </div>
             </div>
